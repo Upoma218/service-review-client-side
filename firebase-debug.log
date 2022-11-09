@@ -1,0 +1,98 @@
+[debug] [2022-11-09T09:16:44.971Z] ----------------------------------------------------------------------
+[debug] [2022-11-09T09:16:44.975Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-11-09T09:16:44.975Z] CLI Version:   11.15.0
+[debug] [2022-11-09T09:16:44.976Z] Platform:      win32
+[debug] [2022-11-09T09:16:44.976Z] Node Version:  v18.11.0
+[debug] [2022-11-09T09:16:45.004Z] Time:          Wed Nov 09 2022 15:16:44 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-11-09T09:16:45.004Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-09T09:16:45.027Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-09T09:16:45.027Z] > authorizing via signed-in user (upoma.cdsr@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Programming herro caurse tasks\Projects\Javascripts\Milestone - 11\Assignment-11\flora-the-chef
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-11-09T09:18:06.415Z] ----------------------------------------------------------------------
+[debug] [2022-11-09T09:18:06.418Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-11-09T09:18:06.419Z] CLI Version:   11.15.0
+[debug] [2022-11-09T09:18:06.419Z] Platform:      win32
+[debug] [2022-11-09T09:18:06.419Z] Node Version:  v18.11.0
+[debug] [2022-11-09T09:18:06.421Z] Time:          Wed Nov 09 2022 15:18:06 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-11-09T09:18:06.421Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-09T09:18:06.433Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-09T09:18:06.433Z] > authorizing via signed-in user (upoma.cdsr@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Programming herro caurse tasks\Projects\Javascripts\Milestone - 11\Assignment-11\flora-the-chef
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-11-09T09:19:19.733Z] ----------------------------------------------------------------------
+[debug] [2022-11-09T09:19:19.736Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-11-09T09:19:19.737Z] CLI Version:   11.15.0
+[debug] [2022-11-09T09:19:19.737Z] Platform:      win32
+[debug] [2022-11-09T09:19:19.738Z] Node Version:  v18.11.0
+[debug] [2022-11-09T09:19:19.739Z] Time:          Wed Nov 09 2022 15:19:19 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-11-09T09:19:19.739Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-09T09:19:19.751Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-09T09:19:19.752Z] > authorizing via signed-in user (upoma.cdsr@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Programming herro caurse tasks\Projects\Javascripts\Milestone - 11\Assignment-11\flora-the-chef
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-11-09T09:19:31.385Z] > refreshing access token with scopes: []
+[debug] [2022-11-09T09:19:31.389Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-11-09T09:19:31.390Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-09T09:19:42.659Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-11-09T09:19:47.702Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
