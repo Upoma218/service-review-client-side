@@ -1,7 +1,7 @@
 import React from 'react';
 import About from '../../About/About';
 import Menu from '../../Menu/Menu';
-import Services from '../../Services/Services';
+import Services from '../../Services/Services/Services';
 import Banners from '../Banners/Banners';
 
 
