@@ -1,4 +1,5 @@
-// import React, { useEffect, useState } from 'react';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 import { useLoaderData } from 'react-router-dom';
 
 const ServiceDetails = () => {
@@ -9,7 +10,11 @@ const ServiceDetails = () => {
         <div className=' bg-base-100 shadow-xl max-w-screen-xl mx-auto mt-12'>
             <h1 className='text-3xl font-bold text-center'>Service Details</h1>
             <div className="card my-12 glass">
-                <figure><img src={img} className="pt-24 px-24 rounded-3xl" alt="car!" /></figure>
+                <PhotoProvider>
+                    <PhotoView src={img}>
+                        <figure><img src={img} className="pt-24 px-24 rounded-3xl" alt="" /></figure>
+                    </PhotoView>
+                </PhotoProvider>
                 <div className="card-body">
                     <h2 className="text-center text-3xl font bold">{title}</h2>
                     <p className='font-semibold text-sm text-center my-6'>Service Fee: {serviceFee}</p>
