@@ -3,6 +3,7 @@ import Main from "../Layouts/Main";
 import About from "../Pages/About/About";
 import Blog from "../Pages/Blog/Blog";
 import Home from "../Pages/HomePage/Home/Home";
+import Card from "../Pages/Services/Card";
 import Services from "../Pages/Services/Services/Services";
 
 const router = createBrowserRouter([
@@ -15,9 +16,8 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/services',
-                element: <Services></Services>,
-                loader: () => fetch('http://localhost:5000/services')
+                path: '/card',
+                element: <Card></Card>
             },
             {
                 path: '/about',
