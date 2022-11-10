@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl max-w-screen-xl mx-auto mt-24">
             <figure><img src={logo} alt="Album" /></figure>
-            <div className="card-body w-1/2 px-20">
+            <div className="card-body w-1/2 px-20 text-center">
                 <h2 className="card-title">About Me</h2>
                 <p>I am Flora. I am working as a chef in my own kitchen! I like to provide different kind od services which are relevant with different kind of food, desert, snack etc. I like to take order from various customers! I am working in this sector since 2000. I always try to provide the best quality services for my respected customers! </p>
                 <div className="stats stats-vertical lg:stats-horizontal shadow">
