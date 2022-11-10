@@ -18,13 +18,14 @@ const ServiceDetails = () => {
     useEffect(() => {
         fetch('http://localhost:5000/reviews')
             .then(res => res.json)
-            .then(data => setReviews(data))
+            .then(data => console.log(data))
+
     }, [])
 
     const handleAddReview = event => {
         event.preventDefault();
         const form = event.target;
-        const name = `${form.firstName.value} ${form.lastName.value}`;
+        const name = form.name.value;
         const email = user?.email || 'Unregistered';
         const photoURL = form.photoURL.value;
         const text = form.text.value;
@@ -38,11 +39,11 @@ const ServiceDetails = () => {
         }
 
 
-        fetch('https://genius-car-server-new-upoma218.vercel.app/orders', {
+        fetch('http://localhost:5000/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                authorization: `Bearer ${localStorage.getItem('genius-token')}`
+                authorization: `Bearer ${localStorage.getItem('flora-token')}`
             },
             body: JSON.stringify(review)
         })
@@ -148,7 +149,7 @@ const ServiceDetails = () => {
             </div>
 
             {
-                user?.email? 
+                user && user.email ? 
                 <div className='mb-36 max-w-screen-xl mx-auto p-24'>
                 <h1 className='text-5xl text-center font-bold mb-12'>Add Your review</h1>
                 <form onSubmit={handleAddReview}>
@@ -163,7 +164,7 @@ const ServiceDetails = () => {
                 </form>
             </div>
                 
-                :<> Please <Link to='login'>Login</Link> to add review</>
+                :<> Please <Link to='/login'>Login</Link> to add review</>
 
             }
         </div>
