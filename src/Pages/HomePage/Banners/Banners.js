@@ -11,7 +11,7 @@ const Banners = () => {
                 <div className='w-1/2'>
                     <h1 className="text-5xl font-bold">Welcome To Flora's Kitchen</h1>
                     <p className="py-10">Hey!! Are you hungry?? Feel free to order your favorite dish!! I can provide you the best quality homemade food in a reasonable price!! You can get home delivery within a short time!! You can also book me for any type of party dishes!! So, why late? Just place Your order soon!!</p>
-                    <Link to='/services'><button className="btn glass w-3/5">Order Now!</button></Link>
+                    <Link to='/card'><button className="btn glass w-3/5">Order Now!</button></Link>
                 </div>
             </div>
         </div>

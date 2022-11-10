@@ -15,10 +15,10 @@ const ServiceDetails = () => {
                         <figure><img src={img} className="pt-24 px-24 rounded-3xl" alt="" /></figure>
                     </PhotoView>
                 </PhotoProvider>
-                <div className="card-body">
+                <div className="card-body shadow md:w-full sm:w-full ">
                     <h2 className="text-center text-3xl font bold">{title}</h2>
                     <p className='font-semibold text-sm text-center my-6'>Service Fee: {serviceFee}</p>
-                    <p className="text-center px-60 ">{description}</p>
+                    <p className="text-center lg:px-60 ">{description}</p>
                 </div>
             </div>
         </div>
