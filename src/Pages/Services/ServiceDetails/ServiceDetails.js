@@ -1,23 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import DetailsCard from './DetailsCard';
+// import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const ServiceDetails = () => {
 
-    const [details, setDetails] = useState([]);
-
-    useEffect(() => {
-        fetch(`http://localhost:3000/services/${details._id}`)
-            .then(res => res.json())
-            .then(data => setDetails(data))
-    }, [])
-
+    const details = useLoaderData();
+    const { title, img, description, serviceFee } = details;
     return (
-        <div className=' bg-base-100 shadow-xl max-w-screen-xl mx-auto mt-12 mb-24'>
+        <div className=' bg-base-100 shadow-xl max-w-screen-xl mx-auto mt-12'>
             <h1 className='text-3xl font-bold text-center'>Service Details</h1>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 py-12 max-w-screen-xl mx-auto '>
-                {
-                    details.map(detail => <DetailsCard key={detail._id} detail={detail}></DetailsCard>)
-                }
+            <div className="card my-12 glass">
+                <figure><img src={img} className="pt-24 px-24 rounded-3xl" alt="car!" /></figure>
+                <div className="card-body">
+                    <h2 className="text-center text-3xl font bold">{title}</h2>
+                    <p className='font-semibold text-sm text-center my-6'>Service Fee: {serviceFee}</p>
+                    <p className="text-center px-60 ">{description}</p>
+                </div>
             </div>
         </div>
     );
