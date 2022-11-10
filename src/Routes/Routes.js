@@ -4,6 +4,7 @@ import About from "../Pages/About/About";
 import Blog from "../Pages/Blog/Blog";
 import Home from "../Pages/HomePage/Home/Home";
 import Card from "../Pages/Services/Card";
+import ServiceDetails from "../Pages/Services/ServiceDetails/ServiceDetails";
 import Services from "../Pages/Services/Services/Services";
 
 const router = createBrowserRouter([
@@ -22,6 +23,14 @@ const router = createBrowserRouter([
             {
                 path: '/about',
                 element:<About></About>
+            },
+            {
+                path: '/services/:id',
+                element:<ServiceDetails></ServiceDetails>,
+                loader: ({params}) => {
+                    return fetch(`http://localhost:5000/card/${params.id}`)
+                
+                }
             },
             {
                 path: '/blog',
