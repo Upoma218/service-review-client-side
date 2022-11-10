@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
+import { AuthContext } from '../../../Context/AuthProvider';
+
+
 
 const SocialLogin = () => {
+
     const {googleSignIn} = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
@@ -16,9 +19,8 @@ const SocialLogin = () => {
             console.log(user);
             const currentUser = {
                 email: user.email
-            }
-
-            fetch('https://genius-car-server-new-upoma218.vercel.app/jwt', {
+            } 
+            fetch('http://localhost:5000/jwt', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -28,18 +30,19 @@ const SocialLogin = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    // local storage is the easiest but not the best place to store jwt token
                     localStorage.setItem('genius-token', data.token);
+                    alert('Successfully logged in!')
                     navigate(from, { replace: true });
-                });
+                }); 
             
         })
         .catch(err => console.error(err));
     }
 
+
     return (
         <div className='text-center my-2 '>
-            <button onClick={handleGoogleSignIn} className='btn btn-accent w-4/5'>Google</button> 
+            <button onClick={handleGoogleSignIn} className='btn glass w-4/5'>Google</button> 
         </div>
     );
 };

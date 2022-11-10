@@ -1,9 +1,9 @@
-import React from 'react';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/AuthProvider';
+import loginImg from '../../Assets/login.png';
 import { setAuthToken } from '../../Api/Auth';
-import login from '../../assets/images/login/login.svg'
-import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useTitle from '../../Hook/useTitle';
 
 const SignUp = () => {
     const {createUser, } = useContext(AuthContext);
@@ -21,15 +21,16 @@ const SignUp = () => {
         })
         .catch(error => console.log(error));
     }
+    useTitle('Sign Up');
 
     return (
-        <div className="hero">
+        <div className="hero my-12">
         <div className="hero-content flex-col lg:flex-row gap-6">
             <div>
-                <img src={login} alt="" />
+                <img src={loginImg} alt="" />
             </div>
-            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                <h1 className="text-5xl text-center my-5 font-bold">Sign up</h1>
+            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2 border-zinc-800">
+                <h1 className="text-5xl text-center my-5 font-bold pt-4">Sign up</h1>
                 <form onSubmit={handleSignUp} className="card-body">
                     <div className="form-control">
                         <label className="label">
@@ -51,11 +52,11 @@ const SignUp = () => {
                         
                     </div>
                     <div className="form-control mt-6">
-                        <input className="btn btn-accent" type="submit" value="Sign Up" />
+                        <input className="btn glass" type="submit" value="Sign Up" />
                     </div>
                 </form>
-                <p className="font-normal text-base text-zinc-600 text-center my-2">Or Sign Up with </p>
-                <p className=" font-normal text-base text-zinc-600 text-center mt-2 mb-5">Already have an account ? Please <Link to='/login' className='font-semibold text-xl text-orange-600'> Sign In</Link> </p>
+                <p className="font-normal text-base text-center my-2">Or Sign Up with </p>
+                <p className=" font-normal text-base text-center mt-2 mb-5">Already have an account ? Please <Link to='/login' className='font-semibold text-sm'> Sign In</Link> </p>
             </div>
             
         </div>

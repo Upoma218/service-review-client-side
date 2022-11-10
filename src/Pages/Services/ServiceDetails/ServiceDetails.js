@@ -1,8 +1,10 @@
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../../Hook/useTitle';
 
 const ServiceDetails = () => {
+    useTitle('Services');
 
     const details = useLoaderData();
     const { title, img, description, serviceFee } = details;

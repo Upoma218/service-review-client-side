@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../Assets/Logo.png';
+import { AuthContext } from '../Context/AuthProvider';
 
 const Header = () => {
-
-  /*   const {user, logout} = useContext(AuthContext);
+    
+    const {user, logout} = useContext(AuthContext);
 
     const handleLogout = () => {
         logout()
@@ -12,22 +13,23 @@ const Header = () => {
             alert ('If you want to order anything, please login !')
         })
         .catch(error => console.log(error))
-    } */
+    } 
 
     const menuItems = <>
     <Link className='font-semibold mr-10' to='/'>Home</Link>
     <Link className='font-semibold mr-10' to='/about'>About</Link>
     <Link className='font-semibold mr-10' to='/card'>Services</Link>
     <Link className='font-semibold mr-10' to='/blog'>Blog</Link>
-   {/*  {
+    {
         user?.email?
         <>
-        <Link className='font-semibold mr-10' to='/orders'>Orders</Link>
-        <Link  onClick={handleLogout} className='font-semibold mr-10' to='/'>Sign Out</Link>
+        <Link className='font-semibold mr-10' to='/myReviews'>My Reviews</Link>
+        <Link className='font-semibold mr-10' to='/addService'>Add Service</Link>
+        <Link  onClick={handleLogout} className='font-semibold mr-10' to='/'>Logout</Link>
         </>
         :
-        <Link className='font-semibold mr-10' to='/login'>Sign In</Link>
-    } */}
+        <Link className='font-semibold mr-10' to='/login'>Login</Link>
+    }
   
 </>
 
