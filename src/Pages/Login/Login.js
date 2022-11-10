@@ -27,7 +27,7 @@ const Login = () => {
 
                 console.log(currentUser);
 
-                fetch('https://genius-car-server-new-upoma218.vercel.app/jwt', {
+                fetch('http://localhost:5000/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

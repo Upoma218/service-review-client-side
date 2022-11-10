@@ -1,68 +1,26 @@
 [
     {
         "menu_id": "01",
-        "title": "Snacks",
+        "name": "John Smith",
+        "email": "john@gmail.com",
         "img": "https://images.unsplash.com/photo-1571865402713-98ba5a56f12b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
-        "price": "200tk",
-        "description": "You can order any kind ok snacks here!!"
+        "review": "Wow!! You are a very nice chef! Your food quality is awesome! Want to order for food again and again"
         
     },
     {
         "service_id": "02",
-        "title": "Desert",
+        "name": "Mickel Jackson",
+        "email": "mickel@gmail.com",
         "img": "https://images.unsplash.com/photo-1525151498231-bc059cfafa2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-        "price": "300tk",
-        "description": "You can order any kind ok snacks here!!"
+        "review": "Your snacks items were totally fresh and tasty!! Me and my family were enjoying the snacks joyfully!!"
         
     },
     {
         "service_id": "03",
-        "title": "Lunch",
+        "name": "Marina Lora",
+        "email": "marina@gmail.com",
         "img": "https://images.unsplash.com/photo-1600335895229-6e75511892c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-        "price": "5000tk",
-        "description": "You can order any kind ok snacks here!!"
-        
-    },
-    {
-        "service_id": "04",
-        "title": "Dinner",
-        "img": "https://images.unsplash.com/photo-1535473895227-bdecb20fb157?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-        "price": "1000tk",
-        "description": "You can order any kind ok snacks here!!"
-        
-    },
-    {
-        "service_id": "05",
-        "title": "Breakfast",
-        "img": "https://images.unsplash.com/photo-1495214783159-3503fd1b572d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-        "price": "500.00tk",
-        "description": "You can order any kind ok snacks here!!"
-        
-    },
-    {
-        "service_id": "06",
-        "title": "Frozen",
-        "img": "https://images.unsplash.com/photo-1551028150-64b9f398f678?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZnJvemVuJTIwZm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "price": "200.00tk",
-        "description": "You can order any kind ok snacks here!!",
-        "Reviews": [
-            {
-                "name": "John Smith",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ]
+        "review": "Awesome taste! Fresh quality! Also got the delivery timely!! Thank you!!"
         
     }
 ]

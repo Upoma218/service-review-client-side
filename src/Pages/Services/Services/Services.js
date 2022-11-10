@@ -25,7 +25,7 @@ const Services = () => {
                 }
             </div>
             <div className='max-w-screen-xl lg:mx-96 md:mx-60 sm:mx-72 xs:mx-60'>
-                <Link to='/card'><button onClick={() => setSize(6)} className="btn lg:mx-40 md:mx-24 glass text-center btn-xs sm:btn-sm md:btn-md lg:btn-lg mb-12 inline-block align-middle ">View All</button> </Link>
+                <Link to='/card'><button onClick={() => setSize(6)} className="btn lg:mx-48 md:mx-24 glass text-center btn-xs sm:btn-sm md:btn-md lg:btn-lg mb-12 inline-block align-middle ">View All</button> </Link>
             </div>
         </div>
 

@@ -2,7 +2,7 @@ export const setAuthToken = (user) => {
     const currentUser = {
         email: user.email
     }
-    fetch('https://genius-car-server-new-upoma218.vercel.app/jwt', {
+    fetch('http://localhost:5000/jwt', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
@@ -13,7 +13,7 @@ export const setAuthToken = (user) => {
         .then(data => {
             console.log(data);
             // local storage is the easiest but not the best place to store jwt token
-            localStorage.setItem('genius-token', data.token);
+            localStorage.setItem('flora-token', data.token);
             
         });
 
