@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layouts/Main";
 import About from "../Pages/About/About";
 import Blog from "../Pages/Blog/Blog";
+import CustomerReviews from "../Pages/CustomerReviews/CustomerReviews";
 import Home from "../Pages/HomePage/Home/Home";
 import Login from "../Pages/Login/Login";
 import Card from "../Pages/Services/Card";
@@ -40,7 +41,11 @@ const router = createBrowserRouter([
                 element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
             },
-            
+            {
+                path: '/cardReview',
+                element: <CustomerReviews></CustomerReviews>,
+                loader: () => fetch('http://localhost:5000/cardReviews')
+            },
             {
                 path: '/blog',
                 element: <Blog></Blog>
