@@ -37,7 +37,7 @@ const Login = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data);
-                        localStorage.setItem('genius-token', data.token);
+                        localStorage.setItem('flora-token', data.token);
                         alert('Successfully logged in!')
                         navigate(from, { replace: true });
                     });
@@ -75,7 +75,7 @@ const Login = () => {
                     </form>
                     <p className="font-normal text-base text-center my-3">Or Sign In with </p>
                     <SocialLogin></SocialLogin>
-                    <p className="font-normal text-base text-center mt-2 mb-5">New to Genius Car ? <Link to='/signup' className='font-semibold text-sm'>Please Sign Up</Link> </p>
+                    <p className="font-normal text-base text-center mt-2 mb-5">New to flora Car ? <Link to='/signup' className='font-semibold text-sm'>Please Sign Up</Link> </p>
                 </div>
             </div>
         </div>

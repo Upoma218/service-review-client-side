@@ -30,7 +30,7 @@ const SocialLogin = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    localStorage.setItem('genius-token', data.token);
+                    localStorage.setItem('flora-token', data.token);
                     alert('Successfully logged in!')
                     navigate(from, { replace: true });
                 }); 

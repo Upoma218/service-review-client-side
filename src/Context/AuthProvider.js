@@ -30,7 +30,7 @@ const AuthProvider = ({children}) => {
     }
 
     const logout = () =>{
-        localStorage.removeItem('genius-token');
+        localStorage.removeItem('flora-token');
         return signOut(auth);
     }
 

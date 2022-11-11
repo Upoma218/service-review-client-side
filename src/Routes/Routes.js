@@ -3,8 +3,10 @@ import Main from "../Layouts/Main";
 import About from "../Pages/About/About";
 import Blog from "../Pages/Blog/Blog";
 import CustomerReviews from "../Pages/CustomerReviews/CustomerReviews";
+import MyReviews from "../Pages/CustomerReviews/MyReviews/MyReviews";
 import Home from "../Pages/HomePage/Home/Home";
 import Login from "../Pages/Login/Login";
+import AddServices from "../Pages/Services/AddServices/AddServices";
 import Card from "../Pages/Services/Card";
 import ServiceDetails from "../Pages/Services/ServiceDetails/ServiceDetails";
 import SignUp from "../Pages/SignUp/SignUp";
@@ -49,6 +51,16 @@ const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/myReviews',
+                element: <MyReviews></MyReviews>
+                
+            },
+            {
+                path: '/addService',
+                element: <AddServices></AddServices>
+                
             }
         ]
     }

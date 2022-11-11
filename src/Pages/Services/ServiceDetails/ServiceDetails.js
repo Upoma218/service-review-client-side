@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
-import {  useLoaderData, useNavigate } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 import useTitle from '../../../Hook/useTitle';
+import CustomerReviews from '../../CustomerReviews/CustomerReviews';
 
 const ServiceDetails = () => {
     const { user } = useContext(AuthContext)
@@ -44,12 +45,13 @@ const ServiceDetails = () => {
                 if (data.acknowledged) {
                     alert('Review added successfully!');
                     form.reset();
-                    navigate('/reviews')
+                    navigate('/myReviews')
                 }
                 console.log(data);
             })
             .catch(error => console.log(error))
     }
+
 
     return (
         <div className='shadow-xl max-w-screen-xl mx-auto mt-12'>
@@ -66,7 +68,8 @@ const ServiceDetails = () => {
                     <p className="text-center lg:px-60 ">{description}</p>
                 </div>
             </div>
-                <div className='mb-36 max-w-screen-xl mx-auto mt-24'>
+            <CustomerReviews id={_id}></CustomerReviews>
+            <div className='mb-36 max-w-screen-xl mx-auto mt-24'>
                 <h1 className='text-5xl text-center font-bold mb-12'>Add Your review</h1>
                 <form onSubmit={handleAddReview}>
                     <div className='grid border-2 border-zinc-800 p-12 rounded sm:grid-cols-1 lg:grid-cols-2 gap-4'>
@@ -79,8 +82,8 @@ const ServiceDetails = () => {
                     <input type="submit" className="btn btn-active glass w-full mt-4" value=" Add Review" required />
                 </form>
             </div>
-            
-           
+
+
         </div>
     );
 };

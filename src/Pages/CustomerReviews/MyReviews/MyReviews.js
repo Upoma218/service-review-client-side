@@ -1,35 +1,43 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../Context/AuthProvider';
-const CustomerReviews = ({id}) => {
-    const {user, logout} = useContext(AuthContext);
+import { AuthContext } from '../../../Context/AuthProvider';
+
+const MyReviews = () => {
+
+    const { user } = useContext(AuthContext);
+    console.log(user?.email)
 
     const [reviews, setReviews] = useState([]);
+    // const reviews = useLoaderData();
+    // console.log(reviews);
 
     useEffect(() => {
         fetch('http://localhost:5000/cardReviews')
-        .then(res => res.json())
-        .then(data => setReviews(data))
-    },[])
+        
+            .then(res => res.json())
+            .then(data => setReviews([...data].reverse()))
+    }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/cardReviews?service=${id}`, {
+       if(user?.email){
+        fetch(`http://localhost:5000/myReviews?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('flora-token')}`
             }
         })
             .then(res => {
                 if (res.status === 401 || res.status === 403) {
-                    return logout()
+                    // return logout()
                 }
                 return res.json()
             })
 
             .then(data => {
+
                 setReviews(data)
             })
+       }
 
-    }, [])
-
+    }, [user?.email])
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure to order this order?');
         if (proceed) {
@@ -51,11 +59,10 @@ const CustomerReviews = ({id}) => {
         }
     }
 
-
     return (
         <div className="overflow-x-auto w-full shadow-xl max-w-screen-xl mx-auto my-24">
-            <h1 className='text-5xl text-center font-bold mb-12'>Customer review: {reviews.length }</h1>
-           
+            <h1 className='text-5xl text-center font-bold mb-12'>My review: {reviews?.length}</h1>
+
             <table className="table w-full" >
                 <thead >
                     <tr>
@@ -71,14 +78,14 @@ const CustomerReviews = ({id}) => {
                     </tr>
                 </thead>
                 {
-                    reviews.map(rev =>
+                   reviews?.length &&  reviews?.map(rev =>
 
                         <tbody key={rev._id}>
 
                             <tr>
                                 <th>
                                     <label>
-                                        <button onClick={() => {handleDelete(rev._id)}}  className='btn btn-circle glass'>X</button>
+                                        <button onClick={() => { handleDelete(rev._id) }} className='btn btn-circle glass'>X</button>
                                     </label>
                                 </th>
                                 <td>
@@ -129,4 +136,4 @@ const CustomerReviews = ({id}) => {
     );
 };
 
-export default CustomerReviews;
+export default MyReviews;
