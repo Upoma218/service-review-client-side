@@ -1,17 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 
 const MyReviews = () => {
 
     const { user } = useContext(AuthContext);
-    console.log(user?.email)
+
 
     const [reviews, setReviews] = useState([]);
     // const reviews = useLoaderData();
     // console.log(reviews);
 
     useEffect(() => {
-        fetch('http://localhost:5000/cardReviews')
+        fetch('https://flora-the-chef-server.vercel.app/cardReviews')
         
             .then(res => res.json())
             .then(data => setReviews([...data].reverse()))
@@ -19,7 +20,7 @@ const MyReviews = () => {
 
     useEffect(() => {
        if(user?.email){
-        fetch(`http://localhost:5000/myReviews?email=${user?.email}`, {
+        fetch(`https://flora-the-chef-server.vercel.app/myReviews?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('flora-token')}`
             }
@@ -41,7 +42,7 @@ const MyReviews = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure to order this order?');
         if (proceed) {
-            fetch(`http://localhost:5000/cardReviews/${id}`, {
+            fetch(`https://flora-the-chef-server.vercel.app/cardReviews/${id}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('flora-token')}`
@@ -111,7 +112,7 @@ const MyReviews = () => {
                                 </td>
                                 <td>{rev.text}</td>
                                 <th>
-                                    <button className="btn glass btn-sm">Update</button>
+                                    <Link to={`/updateReview/${rev._id}`}><button className="btn glass btn-sm">Update</button></Link>
                                 </th>
                             </tr>
 

@@ -32,7 +32,7 @@ const ServiceDetails = () => {
         }
 
 
-        fetch('http://localhost:5000/cardReviews', {
+        fetch('https://flora-the-chef-server.vercel.app/cardReviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

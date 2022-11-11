@@ -10,6 +10,7 @@ import AddServices from "../Pages/Services/AddServices/AddServices";
 import Card from "../Pages/Services/Card";
 import ServiceDetails from "../Pages/Services/ServiceDetails/ServiceDetails";
 import SignUp from "../Pages/SignUp/SignUp";
+import UpdateReviews from "../Pages/UpdateReviews";
 import PrivateRoute from "./PrivateRoutes/PrivateRoutes";
 
 const router = createBrowserRouter([
@@ -41,12 +42,12 @@ const router = createBrowserRouter([
             {
                 path: '/services/:id',
                 element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({params}) => fetch(`https://flora-the-chef-server.vercel.app/services/${params.id}`)
             },
             {
                 path: '/cardReview',
                 element: <CustomerReviews></CustomerReviews>,
-                loader: () => fetch('http://localhost:5000/cardReviews')
+                loader: () => fetch('https://flora-the-chef-server.vercel.app/cardReviews')
             },
             {
                 path: '/blog',
@@ -58,8 +59,13 @@ const router = createBrowserRouter([
                 
             },
             {
+                path: '/updateReview/:id',
+                element: <UpdateReviews></UpdateReviews>,
+                loader: ({params}) => fetch(`https://flora-the-chef-server.vercel.app/cardReviews/${params.id}`)
+            },
+            {
                 path: '/addService',
-                element: <AddServices></AddServices>
+                element: <PrivateRoute><AddServices></AddServices></PrivateRoute>
                 
             }
         ]

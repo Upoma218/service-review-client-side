@@ -9,7 +9,7 @@ const Services = () => {
     const [size, setSize] = useState(3);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services?size=${size}`)
+        fetch(`https://flora-the-chef-server.vercel.app/services?size=${size}`)
             .then(res => res.json())
             .then(data => setServices(data.services))
     }, [size])

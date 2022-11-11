@@ -5,7 +5,7 @@ const Card = () => {
     const [card, setCard] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/card')
+        fetch('https://flora-the-chef-server.vercel.app/card')
         .then(res => res.json())
         .then(data => setCard(data))
     },[])

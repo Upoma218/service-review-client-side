@@ -6,13 +6,13 @@ const CustomerReviews = ({id}) => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/cardReviews')
+        fetch('https://flora-the-chef-server.vercel.app/cardReviews')
         .then(res => res.json())
         .then(data => setReviews(data))
     },[])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/cardReviews?service=${id}`, {
+        fetch(`https://flora-the-chef-server.vercel.app/cardReviews?service=${id}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('flora-token')}`
             }
@@ -33,7 +33,7 @@ const CustomerReviews = ({id}) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure to order this order?');
         if (proceed) {
-            fetch(`http://localhost:5000/cardReviews/${id}`, {
+            fetch(`https://flora-the-chef-server.vercel.app/cardReviews/${id}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('flora-token')}`
@@ -60,14 +60,13 @@ const CustomerReviews = ({id}) => {
                 <thead >
                     <tr>
                         <th>
-                            <label>
-                                Delete
-                            </label>
+                            
                         </th>
                         <th>Image</th>
                         <th>User</th>
                         <th>Review</th>
-                        <th>Update</th>
+                        <th></th>
+                        
                     </tr>
                 </thead>
                 {
@@ -78,7 +77,7 @@ const CustomerReviews = ({id}) => {
                             <tr>
                                 <th>
                                     <label>
-                                        <button onClick={() => {handleDelete(rev._id)}}  className='btn btn-circle glass'>X</button>
+                                        
                                     </label>
                                 </th>
                                 <td>
@@ -104,7 +103,7 @@ const CustomerReviews = ({id}) => {
                                 </td>
                                 <td>{rev.text}</td>
                                 <th>
-                                    <button className="btn glass btn-sm">Update</button>
+                                    
                                 </th>
                             </tr>
 

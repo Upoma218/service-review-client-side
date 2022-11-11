@@ -6,7 +6,7 @@ const Menu = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/items')
+        fetch('https://flora-the-chef-server.vercel.app/items')
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])

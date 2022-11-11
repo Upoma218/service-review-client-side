@@ -2,7 +2,7 @@ export const setAuthToken = (user) => {
     const currentUser = {
         email: user.email
     }
-    fetch('http://localhost:5000/jwt', {
+    fetch('https://flora-the-chef-server.vercel.app/jwt', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
