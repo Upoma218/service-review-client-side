@@ -9,7 +9,7 @@ const UpdateReviews = () => {
         event.preventDefault();
         // console.log(review);
         fetch(`https://flora-the-chef-server.vercel.app/cardReviews/${prevReviews._id}`, {
-            method: 'PUT',
+            method: 'patch',
             headers: {
                 'content-type': 'application/json'
             },

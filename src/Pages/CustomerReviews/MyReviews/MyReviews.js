@@ -74,8 +74,9 @@ const MyReviews = () => {
                         </th>
                         <th>Image</th>
                         <th>User</th>
+                        <th></th>
                         <th>Review</th>
-                        <th>Update</th>
+                        {/* <th>Update</th> */}
                     </tr>
                 </thead>
                 {
@@ -105,15 +106,16 @@ const MyReviews = () => {
                                         </div>
                                     </div>
                                 </td>
+                                <td></td>
                                 <td>
                                     {rev.name}
                                     <br />
                                     <span className="badge badge-ghost badge-sm">{rev.email}</span>
                                 </td>
                                 <td>{rev.text}</td>
-                                <th>
+                                {/* <th>
                                     <Link to={`/updateReview/${rev._id}`}><button className="btn glass btn-sm">Update</button></Link>
-                                </th>
+                                </th> */}
                             </tr>
 
                         </tbody>
